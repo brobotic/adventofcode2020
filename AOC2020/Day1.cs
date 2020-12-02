@@ -59,23 +59,11 @@ namespace AOC2020
                             Console.WriteLine($"{input[i]} + {j} + {k} == 2020");
                             Console.WriteLine(num1 * num2 * num3);
                             found = true;
-                            break;
+                            Console.ReadLine();
                         }
                     }
-
-                    if (found)
-                    {
-                        break;
-                    }
-                }
-
-                if (found)
-                {
-                    break;
                 }
             }
-
-            Console.ReadLine();
         }
     }
 }
