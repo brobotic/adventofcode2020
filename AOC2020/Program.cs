@@ -11,7 +11,7 @@ namespace AOC2020
         static void Main(string[] args)
         {
             Day3 day3 = new Day3();
-            day3.Part1();
+            day3.Part2();
         }
     }
 }
