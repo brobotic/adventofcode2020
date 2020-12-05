@@ -68,7 +68,7 @@ namespace AOC2020
             Console.ReadKey();
         }
 
-        public bool IsValidPassportOne(Dictionary<string, string> passport)
+        public bool IsValidPassportOne(Dictionary<string, string> passport )
         {
             if (passport.Count == fields.Count)
             {
