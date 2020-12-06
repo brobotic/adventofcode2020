@@ -41,7 +41,6 @@ namespace AOC2020
 
         public void Part2()
         {
-            var found = false;
             var input = u.GetLinesInFile(@"c:\tmp\adventofcode2020\day1.txt");
 
             for (int i = 0; i < input.Count; i++)
@@ -58,7 +57,6 @@ namespace AOC2020
                         {
                             Console.WriteLine($"{input[i]} + {j} + {k} == 2020");
                             Console.WriteLine(num1 * num2 * num3);
-                            found = true;
                             Console.ReadLine();
                         }
                     }

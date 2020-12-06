@@ -85,7 +85,6 @@ namespace AOC2020
 
         public bool IsValidPassportTwo(Dictionary<string, string> passport)
         {
-            var valid = false;
             var birthYear = Int32.Parse(passport["byr"]);
             var issueYear = Int32.Parse(passport["iyr"]);
             var expirationYear = Int32.Parse(passport["eyr"]);
