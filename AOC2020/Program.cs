@@ -10,8 +10,8 @@ namespace AOC2020
     {
         static void Main(string[] args)
         {
-            Day6 day6 = new Day6();
-            day6.Part2();
+            Day7 day7 = new Day7();
+            day7.Part2();
         }
     }
 }

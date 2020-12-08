@@ -84,10 +84,7 @@ namespace AOC2020
                     {
                         foreach (var _char in input[i])
                         {
-                            if (!groupedAnswers[currentGroup][i].Contains(_char))
-                            {
-                                groupedAnswers[currentGroup][i] += _char;
-                            }
+                            groupedAnswers[currentGroup][i] += _char;
                         }
                     }
                     else
