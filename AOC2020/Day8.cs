@@ -59,8 +59,7 @@ namespace AOC2020
         {
             var input = utils.GetLinesInFile(@"c:\tmp\adventofcode2020\day8.txt");
             var allInputs = new List<List<string>>();
-            var instructionsChangedNop = new List<int>();
-            var instructionsChangedJmp = new List<int>();
+            var instructionsChanged = new List<int>();
             var instructionsUsed = new List<int>();
             var completed = false;
 
@@ -79,7 +78,7 @@ namespace AOC2020
 
                     if (instruction == "nop" || instruction == "jmp")
                     {
-                        if (!instructionsChangedNop.Contains(k))
+                        if (!instructionsChanged.Contains(k))
                         {
                             if (instruction == "nop")
                             {
@@ -90,7 +89,7 @@ namespace AOC2020
                                 inputCopy[k] = inputCopy[k].Replace("jmp", "nop");
                             }
 
-                            instructionsChangedNop.Add(k);
+                            instructionsChanged.Add(k);
                             break;
                         }
                     }
@@ -113,6 +112,8 @@ namespace AOC2020
 
                 foreach (var i in inp)
                 {
+
+                    // If we successfully incremented past the length of the input list, our program has completed
                     if (position >= inp.Count())
                     {
                         completed = true;
@@ -130,6 +131,7 @@ namespace AOC2020
                         continue;
                     }
 
+                    // Stop execution of this program if we have performed this instruction already
                     if (instruction != "nop" && instructionsPerformed.Contains(position))
                     {
                         break;
